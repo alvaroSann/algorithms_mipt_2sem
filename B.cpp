@@ -3,11 +3,7 @@
 #include <vector>
 
 class DSU {
- private:
-  std::vector<int> parent_;
-  std::vector<int> rank_;
-
- public:
+  public:
   DSU(int size) {
     parent_.resize(size);
     rank_.resize(size);
@@ -40,6 +36,10 @@ class DSU {
       ++rank_[from];
     }
   }
+
+  private:
+  std::vector<int> parent_;
+  std::vector<int> rank_;
 };
 
 class Edge {
